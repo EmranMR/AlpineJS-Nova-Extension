@@ -1,43 +1,38 @@
-
-exports.activate = function() {
-    // Do work when the extension is activated
+exports.activate = function () {
+  // Do work when the extension is activated
 }
 
-exports.deactivate = function() {
-    // Clean up state before the extension is deactivated
+exports.deactivate = function () {
+  // Clean up state before the extension is deactivated
 }
-
 
 class CompletionProvider {
-    constructor() {
-        
+  constructor() {}
+
+  provideCompletionItems(editor, context) {
+    console.log(context.selectors[0].string)
+    //check if the editor is in any scopes
+    if (context.selectors[0] instanceof ScopeSelector) {
+      // is it in attribute scope
+      if (context.selectors[0].matches("attribute.tag.name")) {
+        let item = new CompletionItem("x-test", CompletionItemKind.Tag)
+        item.documentation = "hello"
+        item.insertText = "x-data='{$0}'"
+        item.insertTextFormat = InsertTextFormat.Snippet
+        return [item]
+      }
     }
-    
-    provideCompletionItems(editor, context) {
-        // The text immediately preceding the cursor
-        let text = context.text;
-        
-        let tags = ["foo", "bar", "baz"];
-        let items = [];
-        
-        for (let i = 0; i < tags.length; i++) {
-            let tag = tags[i];
-            
-            let item = new CompletionItem(tag, CompletionItemKind.Tag);
-            
-            // The text to be inserted in the editor
-            item.insertText = "<" + tag + ">$0</" + tag + ">";
-            
-            // Tokenizes snippet placeholders such as "$0"
-            // Remove this line or set to InsertTextFormat.PlainText if not using the snippet format.
-            item.insertTextFormat = InsertTextFormat.Snippet;
-            
-            items.push(item);
-        }
-        
-        return items;
+    // is it in attribute.value scope?
+    if (
+      context.selectors[0].matches("html.tag.attribute.value.double-quoted")
+    ) {
+      let item = new CompletionItem("atti.value", CompletionItemKind.Tag)
+      item.documentation = "hello"
+      item.insertText = "${0:yes}"
+      item.insertTextFormat = InsertTextFormat.Snippet
+      return [item]
     }
+  }
 }
 
-
-nova.assistants.registerCompletionAssistant("html", new CompletionProvider());
+nova.assistants.registerCompletionAssistant("html", new CompletionProvider())
