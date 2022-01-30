@@ -1,3 +1,6 @@
+///keyup and keydown modifers
+let keyboard = require("./KeyboardModifiers.js")
+
 exports.attributes = [
   {
     label: "x-data",
@@ -13,6 +16,15 @@ exports.attributes = [
     label: "x-show",
     description:
       "\u0060x-show\u0060 toggles the \u0060display: none;\u0060 style on the element depending if the expression resolves to \u0060true\u0060 or \u0060false\u0060.\n\n**Example:** \u0060\u003Cdiv x-show=\u0022open\u0022\u003E\u003C/div\u003E\u0060\n\n**Structure:** \u0060\u003Cdiv x-show=\u0022[expression]\u0022\u003E\u003C/div\u003E\u0060",
+    modifier: [
+      {
+        detail: "Alpine.js .transition",
+        label: ".transition",
+        body: ".transition",
+        description:
+          "x-show.transition is a convenience API for making your x-shows more pleasant using CSS transitions.",
+      },
+    ],
   },
   {
     label: "x-bind:",
@@ -208,6 +220,7 @@ exports.attributes = [
     label: "x-on:keydown",
     description:
       "A key is pressed down.\n\n---\n\n\u0060x-on\u0060 attaches an event listener to the element it\u0027s declared on. When that event is emitted, the JavaScript expression set as its value is executed.\n\nIf any data is modified in the expression, other element attributes \u0022bound\u0022 to this data, will be updated.\n\n**Example:** \u0060\u003Cbutton x-on:click=\u0022foo = \u0027bar\u0027\u0022\u003E\u003C/button\u003E\u0060\n\n**Structure:** \u0060\u003Cbutton x-on:[event]=\u0022[expression]\u0022\u003E\u003C/button\u003E\u0060\n\n\u003E Note: You are free to use the shorter \u0022@\u0022 syntax: \u0060@click=\u0022...\u0022\u0060",
+    modifiers: keyboard.modifiers,
   },
   {
     label: "x-on:keypress",
@@ -217,7 +230,8 @@ exports.attributes = [
   {
     label: "x-on:keyup",
     description:
-      "A key is released.\n\n---\n\n\u0060x-on\u0060 attaches an event listener to the element it\u0027s declared on. When that event is emitted, the JavaScript expression set as its value is executed.\n\nIf any data is modified in the expression, other element attributes \u0022bound\u0022 to this data, will be updated.\n\n**Example:** \u0060\u003Cbutton x-on:click=\u0022foo = \u0027bar\u0027\u0022\u003E\u003C/button\u003E\u0060\n\n**Structure:** \u0060\u003Cbutton x-on:[event]=\u0022[expression]\u0022\u003E\u003C/button\u003E\u0060\n\n\u003E Note: You are free to use the shorter \u0022@\u0022 syntax: \u0060@click=\u0022...\u0022\u0060",
+      "A key is released.\n\n---sn\n\u0060x-on\u0060 attaches an event listener to the element it\u0027s declared on. When that event is emitted, the JavaScript expression set as its value is executed.\n\nIf any data is modified in the expression, other element attributes \u0022bound\u0022 to this data, will be updated.\n\n**Example:** \u0060\u003Cbutton x-on:click=\u0022foo = \u0027bar\u0027\u0022\u003E\u003C/button\u003E\u0060\n\n**Structure:** \u0060\u003Cbutton x-on:[event]=\u0022[expression]\u0022\u003E\u003C/button\u003E\u0060\n\n\u003E Note: You are free to use the shorter \u0022@\u0022 syntax: \u0060@click=\u0022...\u0022\u0060",
+    modifiers: keyboard.modifiers,
   },
   {
     label: "x-on:load",
