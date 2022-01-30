@@ -8,6 +8,8 @@
 
   "main": "main.js",
 
+  "min_runtime": "TODO ",
+
   "activationEvents": ["onLanguage:html"],
 
   "entitlements": {}
