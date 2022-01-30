@@ -1,18 +1,16 @@
 {
-    "identifier": "org.AlpineJs",
-    "name": "AlpineJs",
-    "organization": "MyOrganization",
-    "description": "Lorem ipsum, dolor sit amet.",
-    "version": "1.0",
-    "categories": ["completions"],
-    
-    "main": "main.js",
-    
-    "activationEvents": [
-        "onLanguage:html"
-    ],
-    
-    "entitlements": {
-        "filesystem": "readwrite", "process": true
-    }
+  "identifier": "org.AlpineJs",
+  "name": "AlpineJs",
+  "organization": "Emran Ramezan",
+  "description": "Provides completions for AlpineJS in various files",
+  "version": "1.0",
+  "categories": ["completions", "languages"],
+
+  "main": "main.js",
+
+  "min_runtime": "TODO ",
+
+  "activationEvents": ["onLanguage:html"],
+
+  "entitlements": {}
 }
