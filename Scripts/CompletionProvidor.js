@@ -1,24 +1,30 @@
 class CompletionProvider {
   constructor(definitions) {
     this.definitions = definitions
-    this.items = []
     this.insertFormat = InsertTextFormat.Snippet
-    this.CompletitionKind = CompletionItemKind.Property
+    this.CompletionKind = CompletionItemKind.Property
   }
 
   provideCompletionItems(editor, context) {
     //array of provider depending on the scope we are in
-    for (let definition of this.definitions) {
-      let completion = new CompletionItem(
-        definition.label,
-        this.CompletitionKind
-      )
-      completion.insertText = `${definition.label}="{$0}"`
-      completion.documentation = definition.description
-      completion.insertTextFormat = this.insertFormat
-      this.items = [...this.items, completion]
+    let items = []
+    if (CompletionProvider._isNotScope(context)) {
+      for (let definition of this.definitions.snippets) {
+        items = [
+          ...items,
+          this._createCompletion(definition, CompletionItemKind.Tag),
+        ]
+      }
+    } else if (CompletionProvider._isAttributeScope(context)) {
+      for (let definition of this.definitions.attributes) {
+        items = [...items, this._createCompletion(definition)]
+      }
+    } else if (CompletionProvider._isAttributeValueScope(context)) {
+      for (let definition of this.definitions.attributes) {
+        items = [...items, this._createCompletion(definition)]
+      }
     }
-    return this.items
+    return items
   }
 
   /*  !context scope methods*/
@@ -27,27 +33,29 @@ class CompletionProvider {
     return context.selectors[0] instanceof ScopeSelector ? false : true
   }
   // are we in attribute scopes?
-  static isAttributeScope(context) {
-    return CompletionProvider._isNotScope(context)
-      ? false
-      : context.selectors[0].matches('attribute.tag.name')
-      ? true
-      : false
+  static _isAttributeScope(context) {
+    return context.selectors[0].matches('attribute.tag.name') ? true : false
   }
   // are we in attribute value scope
-  static isAttributeValueScope(context) {
-    return CompletionProvider._isNotScope(context)
-      ? false
-      : context.selectors[0].matches('html.tag.attribute.value.double-quoted')
+  static _isAttributeValueScope(context) {
+    return context.selectors[0].matches(
+      'html.tag.attribute.value.double-quoted'
+    )
       ? true
       : false
   }
 
-  _createCompletion(definition) {
-    let completion = new CompletionItem(definition.label, this.CompletitionKind)
-    completion.insertText = `${definition.label}="{$0}"`
-    completion.documentation = definition.description
+  _createCompletion(definition, kind = this.CompletionKind) {
+    let completion = new CompletionItem(definition.label, kind)
     completion.insertTextFormat = this.insertFormat
+    completion.insertText = definition.body
+      ? definition.body
+      : `${definition.label}="{$0}"`
+    completion.detail = definition.detail ? definition.detail : undefined
+    completion.documentation = definition.documentation
+      ? definition.documentation
+      : undefined
+    return completion
   }
 }
 

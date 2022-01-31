@@ -16,7 +16,7 @@ exports.attributes = [
     label: 'x-show',
     documentation:
       '\u0060x-show\u0060 toggles the \u0060display: none;\u0060 style on the element depending if the expression resolves to \u0060true\u0060 or \u0060false\u0060.\n\n**Example:** \u0060\u003Cdiv x-show=\u0022open\u0022\u003E\u003C/div\u003E\u0060\n\n**Structure:** \u0060\u003Cdiv x-show=\u0022[expression]\u0022\u003E\u003C/div\u003E\u0060',
-    modifier: [
+    modifiers: [
       {
         detail: 'Alpine.js .transition',
         label: '.transition',

@@ -1,16 +1,19 @@
-let FUNCRTIONS = require('./Functions')
-const definitions = []
+let FUNCTIONS = require('./Functions')
+let CompletionProvider = require('./CompletionProvidor.js')
 let selectors = ['html', 'php', 'blade']
 
 exports.activate = function () {
   // Do work when the extension is activated
-  let test = FUNCRTIONS.getDefinitions()
-  test.attributes.forEach((element) => console.log(element.label))
 }
 
 exports.deactivate = function () {
   // Clean up state before the extension is deactivated
 }
+
+nova.assistants.registerCompletionAssistant(
+  selectors,
+  new CompletionProvider(FUNCTIONS.getDefinitions())
+)
 
 // class CompletionProvider {
 //   constructor() {}
@@ -39,11 +42,6 @@ exports.deactivate = function () {
 // }
 //   }
 // }
-
-// nova.assistants.registerCompletionAssistant(
-//   selectors,
-//   new CompletionProvider(Attributes.testDef)
-// )
 
 // !Attribute Value Discussion
 // // is it in attribute.value scope?
