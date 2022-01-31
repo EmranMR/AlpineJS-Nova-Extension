@@ -2,8 +2,10 @@
 
 ## Introduction
 
-This extension finally provides the long overdue **[AlpineJS](https://alpinejs.dev) Autocompletion** + **Snippets** in Nova!  
+This extension finally provides the long overdue **[AlpineJS](https://alpinejs.dev) Autocompletion** + **Snippets** to Nova!  
 The **snippets** are extensible, so if you know any other handy snippets we could all benefit from, please feel free to fork the extension and edit the file located at (Definitions/Snippets/GeneralSnippets.js), edit and pull request? 😇
+
+This extension has been inspired by [Jason Platts's **AMAZING** 💯 TailwindCSS Nova extension](nova://extension/?id=jasonplatts.tailwindcss&name=Tailwind%20CSS) and [Adrian Wilczyński's VSCode AlpineJS extension](https://github.com/AdrianWilczynski/AlpineIntelliSense), in fact most of the definitions in the current version are from there. Hopefully I could update the documentations to the AlpineJS v2 in the future updates
 
 **_Good luck with your projects!_** 🚀
 
@@ -27,7 +29,7 @@ The **snippets** are extensible, so if you know any other handy snippets we coul
 
 ## Report a Bug or Feature Request
 
-Please use the [GitHub Repository](https://github.com/EmranMR/AlpineJSNova) for any requests. 😊
+Please use the [GitHub Repository](https://github.com/EmranMR/AlpineJSNova) for all requests. 😊
 
 ## To Do: 🥵
 
