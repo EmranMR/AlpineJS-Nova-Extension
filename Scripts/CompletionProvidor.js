@@ -51,10 +51,10 @@ class CompletionProvider {
     completion.insertText = definition.body
       ? definition.body
       : `${definition.label}="{$0}"`
-    completion.detail = definition.detail ? definition.detail : undefined
+    completion.detail = definition.detail ? definition.detail : ''
     completion.documentation = definition.documentation
       ? definition.documentation
-      : undefined
+      : ''
     return completion
   }
 }

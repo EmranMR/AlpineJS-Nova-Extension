@@ -1,16 +1,16 @@
 {
-  "identifier": "org.AlpineJs",
+  "identifier": "EmranMR.AlpineJs",
   "name": "AlpineJs",
   "organization": "Emran Ramezan",
-  "description": "Provides completions for AlpineJS in various files",
+  "description": "Provides completions and snnipets for AlpineJS in various files with their inline documentations",
   "version": "1.0",
   "categories": ["completions", "languages"],
 
   "main": "main.js",
 
-  "min_runtime": "TODO ",
+  "min_runtime": "3.0",
 
-  "activationEvents": ["onLanguage:html"],
+  "activationEvents": ["onLanguage:html", "onLanguage:php", "onLanguage:blade"],
 
   "entitlements": {
     "filesystem": "readonly"
