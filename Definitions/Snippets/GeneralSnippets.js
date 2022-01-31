@@ -1,8 +1,11 @@
-// This needs to be inserted in the html body scope
+// These will be inserted in the html body scope
 exports.html = [
   {
+    //right hand detail flag
     detail: 'Alpine.js x-if',
+    //the trigger
     label: 'x-if',
+    //the snippet
     body: '<template x-if="${1:true}">\n\t$0\n</template>',
   },
   {
