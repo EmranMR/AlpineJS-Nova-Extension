@@ -9,7 +9,7 @@ The **snippets** are extensible, so if you know any other handy snippets we coul
 This extension has been inspired by [Jason Platts's **AMAZING** 💯 TailwindCSS Nova extension](https://github.com/jasonplatts/tailwindcss-nova-ext) and [Adrian Wilczyński's VSCode AlpineJS extension](https://github.com/AdrianWilczynski/AlpineIntelliSense), in fact most of the definitions in the current version are from there. Hopefully I could update the documentations to the AlpineJS v2 in the future updates  
 **_Good luck with your projects!_** 🚀
 
-![Attributes](./Images/extension/Attributes.jpg)
+![Attributes](https://raw.githubusercontent.com/EmranMR/AlpineJS-Nova-Extension/master/Images/extension/Attributes.jpg?token=GHSAT0AAAAAABOQINCIFXTJHNB6GV7EGB46YPYHUGQ)
 
 <!-- add gif -->
 
