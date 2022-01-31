@@ -22,36 +22,7 @@ exports.html = [
     body: '<template x-for="(${1:item}, ${2:index}) in ${3:items}\n" :key="$2">\n\t$0\n</template>',
   },
   { detail: 'Alpine.js x-show', label: 'x-show', body: 'x-show="$0"' },
-  {
-    detail: 'Alpine.js x-transition:enter',
-    label: 'x-transition:enter',
-    body: 'x-transition:enter="$0"',
-  },
-  {
-    detail: 'Alpine.js x-transition:enter-start',
-    label: 'x-transition:enter-start',
-    body: 'x-transition:enter-start="$0"',
-  },
-  {
-    detail: 'Alpine.js x-transition:enter-end',
-    label: 'x-transition:enter-end',
-    body: 'x-transition:enter-end="$0"',
-  },
-  {
-    detail: 'Alpine.js x-transition:leave',
-    label: 'x-transition:leave',
-    body: 'x-transition:leave="$0"',
-  },
-  {
-    detail: 'Alpine.js x-transition:leave-start',
-    label: 'x-transition:leave-start',
-    body: 'x-transition:leave-start="$0"',
-  },
-  {
-    detail: 'Alpine.js x-transition:leave-end',
-    label: 'x-transition:leave-end',
-    body: 'x-transition:leave-end="$0"',
-  },
+
   {
     detail: 'Alpine.js $el',
     label: '$el',
