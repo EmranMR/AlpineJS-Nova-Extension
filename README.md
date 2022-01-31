@@ -31,8 +31,6 @@ Please use the [GitHub Repository](https://github.com/EmranMR/AlpineJSNova) for 
 
 ## To Do: 🥵
 
----
-
 1. Adding modifiers support ☑️
 2. Getting JS Syntax highlighting working in the attribute (killer feature!) ☑️
 3. Better Documentations ☑️
