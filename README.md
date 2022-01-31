@@ -20,7 +20,7 @@ This extension has been inspired by [Jason Platts's **AMAZING** 💯 TailwindCSS
 
 ## Prerequisites
 
-- The extension works in **_HTML, Blade, PHP_** if you are using AlpineJS in any other syntax **please raise an issue** on Github and I will add them as soon as possible.
+- The extension works in **_HTML, Blade, PHP_** if you are using AlpineJS in any other syntax [**please raise an issue**](https://github.com/EmranMR/AlpineJS-Nova-Extension/issues) on Github and I will add them as soon as possible.
 
 ## Requirements
 
