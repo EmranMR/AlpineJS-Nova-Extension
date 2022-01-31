@@ -1,15 +1,26 @@
-class CompletitonProvidor {
+class CompletionProvider {
   constructor(definitions) {
     this.definitions = definitions
     this.items = []
     this.insertFormat = InsertTextFormat.Snippet
+    this.CompletitionKind = CompletionItemKind.Property
   }
 
   provideCompletionItems(editor, context) {
-    //array of providors depending on the scope we are in
-
+    //array of provider depending on the scope we are in
+    for (let definition of this.definitions) {
+      let completion = new CompletionItem(
+        definition.label,
+        this.CompletitionKind
+      )
+      completion.insertText = `${definition.label}="{$0}"`
+      completion.documentation = definition.description
+      completion.insertTextFormat = this.insertFormat
+      this.items = [...this.items, completion]
+    }
     return this.items
   }
+
   /*  !context scope methods*/
   // are we in any scopes?
   static _isNotScope(context) {
@@ -17,7 +28,7 @@ class CompletitonProvidor {
   }
   // are we in attribute scopes?
   static isAttributeScope(context) {
-    return CompletitonProvidor._isNotScope(context)
+    return CompletionProvider._isNotScope(context)
       ? false
       : context.selectors[0].matches('attribute.tag.name')
       ? true
@@ -25,10 +36,19 @@ class CompletitonProvidor {
   }
   // are we in attribute value scope
   static isAttributeValueScope(context) {
-    return CompletitonProvidor._isNotScope(context)
+    return CompletionProvider._isNotScope(context)
       ? false
       : context.selectors[0].matches('html.tag.attribute.value.double-quoted')
       ? true
       : false
   }
+
+  _createCompletion(definition) {
+    let completion = new CompletionItem(definition.label, this.CompletitionKind)
+    completion.insertText = `${definition.label}="{$0}"`
+    completion.documentation = definition.description
+    completion.insertTextFormat = this.insertFormat
+  }
 }
+
+module.exports = CompletionProvider

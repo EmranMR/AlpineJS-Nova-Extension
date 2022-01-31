@@ -12,5 +12,7 @@
 
   "activationEvents": ["onLanguage:html"],
 
-  "entitlements": {}
+  "entitlements": {
+    "filesystem": "readonly"
+  }
 }
