@@ -3,6 +3,8 @@
   "name": "AlpineJs",
   "organization": "Emran Ramezan",
   "description": "Provides completions and snnipets for AlpineJS in various files with their inline documentations",
+  "repository": "https://github.com/EmranMR/AlpineJS-Nova-Extension",
+  "bugs": "https://github.com/EmranMR/AlpineJS-Nova-Extension/issues",
   "version": "1.0",
   "categories": ["completions", "languages"],
 
