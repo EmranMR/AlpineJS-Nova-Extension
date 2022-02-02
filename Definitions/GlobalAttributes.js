@@ -6,6 +6,7 @@ exports.attributes = [
     label: 'x-data',
     documentation:
       '\u0060x-data\u0060 declares a new component scope. It tells the framework to initialize a new component with the following data object.\n\nThink of it like the \u0060data\u0060 property of a Vue component.\n\n**Example:** \u0060\u003Cdiv x-data=\u0022{ foo: \u0027bar\u0027 }\u0022\u003E...\u003C/div\u003E\u0060\n\n**Structure:** \u0060\u003Cdiv x-data=\u0022[JSON data object]\u0022\u003E...\u003C/div\u003E\u0060',
+    body: 'x-data="{$0}"',
   },
   {
     label: 'x-init',

@@ -50,7 +50,7 @@ class CompletionProvider {
     completion.insertTextFormat = this.insertFormat
     completion.insertText = definition.body
       ? definition.body
-      : `${definition.label}="{$0}"`
+      : `${definition.label}="$0"`
     completion.detail = definition.detail ? definition.detail : ''
     completion.documentation = definition.documentation
       ? definition.documentation
