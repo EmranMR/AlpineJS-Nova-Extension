@@ -50,7 +50,7 @@ class CompletionProvider {
     completion.insertTextFormat = this.insertFormat
     completion.insertText = definition.body
       ? definition.body
-      : `${definition.label.replace(/^@|:|\$/, '')}="$0"`
+      : `${definition.label.replace(/^@|:|\$/, '')}="$0"` //replace the none word characters otherwise you get duplicates
     completion.detail = definition.detail ? definition.detail : ''
     completion.documentation = definition.documentation
       ? definition.documentation

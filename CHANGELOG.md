@@ -13,3 +13,6 @@ Bug fix: The bracket autocompletion now only applies to the x-data attribute.
 ## Version 1.0.3
 
 Bug fix: outputting double "@" sign or ":" for directives that start with them such as @click or :class
+
+## version 1.0.5
+Language Support: The extension now supports Ruby on Rails html.erb files as well as .liquid files ✅
