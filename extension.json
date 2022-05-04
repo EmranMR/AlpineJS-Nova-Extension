@@ -5,7 +5,7 @@
   "description": "Provides completions and snippets for AlpineJS in various files with their inline documentations",
   "repository": "https://github.com/EmranMR/AlpineJS-Nova-Extension",
   "bugs": "https://github.com/EmranMR/AlpineJS-Nova-Extension/issues",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "categories": ["completions", "languages"],
 
   "main": "main.js",

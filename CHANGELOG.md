@@ -16,3 +16,7 @@ Bug fix: outputting double "@" sign or ":" for directives that start with them s
 
 ## version 1.0.5
 Language Support: The extension now supports Ruby on Rails html.erb files as well as .liquid files ✅
+
+## version 1.0.6
+
+Snippet Update: Alpine-CDN snippet has been updated to the lates version (3.x.x) ⤴️

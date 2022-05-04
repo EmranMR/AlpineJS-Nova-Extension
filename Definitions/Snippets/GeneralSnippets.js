@@ -26,7 +26,7 @@ exports.html = [
   {
     detail: 'Alpine.js CDN',
     label: 'alpine-cdn',
-    body: '<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v${1:2.x.x}/dist/alpine.js" defer></script>',
+    body:' <script defer src="https://unpkg.com/alpinejs@${1:3.x.x}/dist/cdn.min.js"></script>',
     documentation:
       'Add the following script to the end of your <head> section.',
   },
