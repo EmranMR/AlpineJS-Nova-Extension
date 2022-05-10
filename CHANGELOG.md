@@ -20,3 +20,7 @@ Language Support: The extension now supports Ruby on Rails html.erb files as wel
 ## version 1.0.6
 
 Snippet Update: Alpine-CDN snippet has been updated to the lates version (3.x.x) ⤴️
+
+## version 1.0.7
+
+New Directive: Support for Alpine Mask (x-mask & x-mask:dynamic)
