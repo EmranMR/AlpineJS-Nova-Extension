@@ -39,6 +39,7 @@ Annoying pesky bug 🐞 fix (the colon : bug) and new features addition:
   - e.g x-cloak x-ignore expand correctly
   - In x-bind: & x-on: the cursor falls in the correct position
   - better keyup and keydown insertion position/snippet
+  - removed the keypress directive (Deprecated Event)
 
 - **New Directives:**
   - x-ignore
