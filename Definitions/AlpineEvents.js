@@ -130,13 +130,13 @@ exports.attributes = [
 		label: '@keydown',
 		documentation: 'A key is pressed down.',
 		modifiers: event.modifiers,
-		body: '@keydown.$0="$1"',
+		body: 'keydown.$0="$1"',
 	},
 	{
 		label: '@keyup',
 		documentation: 'A key is released.',
 		modifiers: event.modifiers,
-		body: '@keyup.$0="$1"',
+		body: 'keyup.$0="$1"',
 	},
 	{
 		label: '@load',
