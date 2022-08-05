@@ -2,12 +2,11 @@
 
 ## Introduction
 
-This extension finally provides the long overdue **[AlpineJS](https://alpinejs.dev) Autocompletion** + **Snippets** to Nova Editor!
+This extension provides the **[AlpineJS](https://alpinejs.dev) Autocompletion** + **Snippets** to Nova Editor!
 
-The **snippets** are extensible, so if you know any other handy snippets we could all benefit from, please feel free to fork the extension and edit the file located at (Definitions/Snippets/GeneralSnippets.js), edit and pull request? 😇
+This extension has been inspired by [Jason Platts's **AMAZING** 💯 TailwindCSS Nova extension](https://github.com/jasonplatts/tailwindcss-nova-ext) and [Adrian Wilczyński's VSCode AlpineJS extension](https://github.com/AdrianWilczynski/AlpineIntelliSense). In fact I used the dictionary from Adrain's repo, I tidied it up a bit to suit this project, and then made an extension around it utilising the informations from there.
 
-This extension has been inspired by [Jason Platts's **AMAZING** 💯 TailwindCSS Nova extension](https://github.com/jasonplatts/tailwindcss-nova-ext) and [Adrian Wilczyński's VSCode AlpineJS extension](https://github.com/AdrianWilczynski/AlpineIntelliSense), in fact most of the definitions in the current version are from there.
-**_Good luck with your projects!_** 🚀
+**_Good luck with your projects & I hope you find the extension helpful!_** 🚀
 
 ![Attributes](https://user-images.githubusercontent.com/11975985/151862750-15f045e4-ae2d-406b-ae36-721c89508b5c.jpg)
 
@@ -34,7 +33,7 @@ Please use the [GitHub Repository](https://github.com/EmranMR/AlpineJSNova) for 
 ## To Do: 🥵
 
 1. Adding modifiers support ☑️
-2. Getting JS Syntax highlighting working in the attribute (would be a killer feature!) ☑️
+2. Getting JS Syntax highlighting working in the attribute (would be a killer feature!, not possible atm due to extension API limitation.) ❌
 3. Better Documentations ☑️
 4. Allowing user configuration ☑️
 5. Bug fix as we go 🐞? ☑️
