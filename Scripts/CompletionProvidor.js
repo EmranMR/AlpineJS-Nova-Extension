@@ -19,11 +19,20 @@ class CompletionProvider {
 			for (let definition of this.definitions.attributes) {
 				items = [...items, this._createCompletion(definition)]
 			}
-		} else if (CompletionProvider._isAttributeValueScope(context)) {
-			for (let definition of this.definitions.attributes) {
-				items = [...items, this._createCompletion(definition)]
-			}
 		}
+		/*
+		|--------------------------------------------------------------------------
+		| Value Autocompletion
+		|--------------------------------------------------------------------------
+		|
+		| Use this for values but, but atm not required
+		|
+		*/
+		// else if (CompletionProvider._isAttributeValueScope(context)) {
+		// 	for (let definition of this.definitions.attributes) {
+		// 		items = [...items, this._createCompletion(definition)]
+		// 	}
+		// }
 		return items
 	}
 
