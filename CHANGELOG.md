@@ -47,3 +47,8 @@ Annoying pesky bug 🐞 fix (the colon : bug) and new features addition:
   - x-modelable
   - x-teleport
   - x-id
+
+## version 1.0.12
+
+- **Bug Fix**:
+  - removed the autocompletion in the value scope.
