@@ -25,7 +25,7 @@ class CompletionProvider {
 		| Value Autocompletion
 		|--------------------------------------------------------------------------
 		|
-		| Use this for values but, but atm not required
+		| Use this for values but, atm not required
 		|
 		*/
 		// else if (CompletionProvider._isAttributeValueScope(context)) {

@@ -19,7 +19,15 @@ This extension has been inspired by [Jason Platts's **AMAZING** 💯 TailwindCSS
 
 ## Prerequisites
 
-- The extension works in **_HTML, Blade, PHP, HTML.ERB and Liquid_** if you are using AlpineJS in any other syntax [**please raise an issue**](https://github.com/EmranMR/AlpineJS-Nova-Extension/issues) on GitHub and I will try to add them as soon as possible.
+- You need to have the syntax highlighting extension of your choice installed for any of the languages below
+- The extension works in
+  - **HTML**
+  - **Blade**
+  - **PHP**
+  - **HTML.ERB**
+  - **Liquid**
+  - **Twig**
+  - Looking for support in any **_other syntax_**? [**please raise an issue**](https://github.com/EmranMR/AlpineJS-Nova-Extension/issues) on GitHub and I will try to add them as soon as possible.
 
 ## Requirements
 
