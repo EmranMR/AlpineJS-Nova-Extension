@@ -1,6 +1,6 @@
 let FUNCTIONS = require('./Functions')
 let CompletionProvider = require('./CompletionProvidor.js')
-let selectors = ['html', 'php', 'blade', 'liquid-html', 'html+erb', 'twig']
+let selectors = ['html', 'php', 'blade', 'liquid-html', 'html+erb', 'twig', 'antlers']
 
 exports.activate = function () {
 	// Do work when the extension is activated
