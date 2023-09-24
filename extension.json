@@ -1,28 +1,28 @@
 {
-	"identifier": "emran-mr.AlpineJs",
-	"name": "AlpineJs",
-	"organization": "Emran Ramezan",
-	"description": "Provides completions and snippets for AlpineJS in various files with their inline documentations",
-	"repository": "https://github.com/EmranMR/AlpineJS-Nova-Extension",
-	"bugs": "https://github.com/EmranMR/AlpineJS-Nova-Extension/issues",
-	"version": "1.1.2",
-	"categories": ["completions", "languages"],
+    "identifier": "emran-mr.AlpineJs",
+    "name": "AlpineJS",
+    "organization": "Emran Ramezan",
+    "description": "Provides completions and snippets for AlpineJS in various files with their inline documentations",
+    "repository": "https://github.com/EmranMR/AlpineJS-Nova-Extension",
+    "bugs": "https://github.com/EmranMR/AlpineJS-Nova-Extension/issues",
+    "version": "1.2.0",
+    "categories": ["completions", "languages"],
 
-	"main": "main.js",
+    "main": "main.js",
 
-	"min_runtime": "3.0",
+    "min_runtime": "3.0",
 
-	"activationEvents": [
-		"onLanguage:html",
-		"onLanguage:php",
-		"onLanguage:blade",
-		"onLanguage:liquid-html",
-		"onLanguage:html+erb",
-		"onLanguage:twig",
-		"onLanguage: antlers"
-	],
+    "activationEvents": [
+        "onLanguage:html",
+        "onLanguage:php",
+        "onLanguage:blade",
+        "onLanguage:liquid-html",
+        "onLanguage:html+erb",
+        "onLanguage:twig",
+        "onLanguage: antlers"
+    ],
 
-	"entitlements": {
-		"filesystem": "readonly"
-	}
+    "entitlements": {
+        "filesystem": "readonly"
+    }
 }
