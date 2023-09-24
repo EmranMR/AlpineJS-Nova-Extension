@@ -18,7 +18,8 @@
 		"onLanguage:blade",
 		"onLanguage:liquid-html",
 		"onLanguage:html+erb",
-		"onLanguage:twig"
+		"onLanguage:twig",
+		"onLanguage: antlers"
 	],
 
 	"entitlements": {
